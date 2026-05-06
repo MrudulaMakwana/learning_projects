@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    font-size: 20px;
+    background-color: #ddd;
+}
+
+.container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    margin: 20px 0;
+}
+
+.progress {
+    background-color: #007bff;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 5px;
+    width: 0%;
+    transition: width 0.4s ease-in-out;
+    z-index: -1;
+}
+
+.iconWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background-color: #ddd;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    font-size: 24px;
+    transition: background 0.3s ease-in-out;
+}
+
+.iconWrapper.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.label {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

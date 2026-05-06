@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 25px;
+    text-align: center;
+}
+
+#userInput{
+padding: 10px 20px;
+width: 400px;
+border: 2px solid black;
+margin: 20px 0px;
+font-size: 20px;
+
+}
+
+.qrContainer{
+display: flex;
+justify-content: center;
+align-items: center;
+margin-bottom: 30px;
+
+}
+
+.errorMessage{
+color: red;
+font-size: 15px;
+
+}
+
+.generateQRBtn{
+    padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: black;
+  border: none;
+  cursor: pointer;
+}

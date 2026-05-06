@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: cadetblue;
+    padding: 10px;
+}
+header div h1{
+text-align: center;
+font-size: 30px;
+background-color: #eee;
+padding: 50px;
+text-align: center;
+}
+
+.navbar{
+overflow: hidden;
+background-color: #000;
+display: flex;
+gap: 20px;
+padding: 15px;
+
+}
+.navbar a{
+    color: #f1f1f1;
+padding: 5px 20px;
+text-decoration: none;
+}
+.navbar a:hover{
+    background-color: white;
+    color: black;
+}
+
+.content{
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.fixed-navbar
+{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}

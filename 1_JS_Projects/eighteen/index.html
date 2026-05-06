@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Tip Calculator</h1>
+    <div class="formWrapper">
+      <div class="input-wrapper">
+        <label for="bill-amount">Bill Amount</label>
+        <input
+          type="number"
+          placeholder="Enter your total bill amount"
+          id="bill-amount"
+          name="bill-amount"
+          class="bill-amount"
+        />
+      </div>
+      <div class="input-wrapper">
+        <label for="discount-percentage">Discount Percentage</label>
+        <label class="dicount-value">0%</label>
+        <input
+          type="range"
+          min="0"
+          max="50"
+          id="discount-percentage"
+          name="discount-percentage"
+          class="discount-percentage"
+        />
+      </div>
+      <div class="input-wrapper">
+        <label for="tip-percentage">Tip Percentage</label>
+        <label class="tip-value">0%</label>
+        <input
+          type="range"
+          min="0"
+          max="80"
+          id="tip-percentage"
+          name="tip-percentage"
+          class="tip-percentage"
+        />
+      </div>
+      <div class="input-wrapper">
+        <label for="no-of-customer">No of Customers</label>
+        <label class="no-of-customer-value">0</label>
+        <input
+          type="range"
+          min="1"
+          max="100"
+          id="no-of-customer"
+          name="no-of-customer"
+          class="no-of-customer"
+        />
+      </div>
+      <button class="generate-bill">Generate Bill</button>
+
+      <div class="result">
+        <label>Total Tip Paid:</label>
+        <label class="total-tip-paid">0</label>
+      </div>
+      <div class="result">
+        <label>Total Amount To Pay:</label>
+        <label class="total-amount-pay">0</label>
+      </div>
+      <div class="result">
+        <label>Total Amount Per Customer:</label>
+        <label class="total-amount-customer">0</label>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

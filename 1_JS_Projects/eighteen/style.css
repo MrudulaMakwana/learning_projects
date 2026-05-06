@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    background-color: rgb(90, 131, 133);
+}
+h1{
+font-size: 50px;
+font-weight: bolder;
+}
+
+
+.formWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: coral;
+    padding: 20px;
+    border-radius: 12px;
+    color: white;
+
+}
+
+.input-wrapper{
+display: flex;
+justify-content: space-between;
+gap: 10px;
+
+}
+
+.input-wrapper label, .result label{
+    font-size: 20px;
+
+}
+button{
+    padding: 10px 20px;
+    border: none;
+    background-color: rgb(79, 133, 17);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    letter-spacing: 2px;
+}
