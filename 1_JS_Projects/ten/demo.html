@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo Model</title>
+    <style>
+      .model-background {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="openModel">Open Model</button>
+    <div class="model-background">
+      <div class="model">
+        <span>Close Model</span>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <div class="buttons">
+          <button id="closeBtn">Close</button>
+          <button id="submitBtn">Submit</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let modelBackground = document.querySelector(".model-background");
+
+      let openModel = document.querySelector("#openModel");
+      let closeBtn = document.querySelector("#closeBtn");
+      let subBtn = document.querySelector("#submitBtn");
+      openModel.addEventListener("click", () => {
+        modelBackground.style.display = "block";
+      });
+      closeBtn.addEventListener("click", () => {
+        modelBackground.style.display = "none";
+      });
+
+      window.addEventListener('click',(e)=>{
+        if(e.target=== modelBackground)
+      {
+        modelBackground.style.display='none';
+      }
+      })
+    </script>
+  </body>
+</html>

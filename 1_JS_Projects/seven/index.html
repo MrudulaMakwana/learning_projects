@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seven</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="box">
+      <h1>Light and Dark Toggle</h1>
+      <button id="chageButton">Change Theme</button>
+    </div>
+   <script>
+    const chageButton=document.getElementById('chageButton')
+
+chageButton.addEventListener('click',()=>{
+    if(document.body.classList.contains('Darktheme'))
+    {
+        document.body.classList.remove('Darktheme')
+        document.body.classList.add('Lighttheme')
+    }
+    else{
+        document.body.classList.remove('Lighttheme')
+        document.body.classList.add('Darktheme')
+    }
+});
+   </script>
+  </body>
+</html>

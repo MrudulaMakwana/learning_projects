@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="hexContainer">
+        <h1 id="hexheader"></h1>
+        <button id="chc">Create Hex Color</button>
+        <button id="ctchex">Copy To Clipboard</button>
+      </div>
+      <div class="rgbContainer">
+        <h1 id="rgbHeader"></h1>
+        
+          <div>
+            <label for="red">Red</label>
+          <input type="range" min="0" max="255" id="red" value="0" />
+          </div>
+          <div>
+            <label for="green">Green</label>
+          <input type="range" min="0" max="255" id="green" value="0" />
+          </div>
+          <div>
+            <label for="blue">Blue</label>
+          <input type="range" min="0" max="255" id="blue" value="0" />
+          </div>
+          <button id="gc">Generate Color</button>
+          <button id="ctcrgb">Copy To Clipboard</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
