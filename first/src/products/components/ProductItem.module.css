@@ -1,0 +1,16 @@
+.title{
+    margin-top: 10px;
+font-size: 25px;
+font-weight: 700;
+}
+
+
+button{
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}

@@ -1,0 +1,174 @@
+npm i react-router-dom
+
+when you want to use routing in your project
+you need to wrap the component in
+<BrowserRouter>
+<App/>
+</BrowserRouter>
+like in  this way
+
+folder src>pages>
+                 -App.jsx 
+                 -receipes > ReceipeList.jsx    > fucntion ReceipeList()    h1 Recipe List 
+                 -comments > ComponentsList.jsx > fucntion ComponentsList() h1 Recipe List
+                 -
+
+
+
+App.jsx
+========================================================================
+const navigate=useNavigate()   //first way to navigating 
+
+    h1> React Routing ,Custom Hooks and More 
+    <button style={{background:'black',color:'white'}}>Navigate to ReceipeList</button>
+    <button onClick={()=> navigate('/receipeList')}>Navigate to ComponentsList</button>
+    <Routes>
+       <Route path='/receipeList' element={<ReceipeList>}/>
+       <Route path='/componentsList' element={<ComponentsList>}/>
+    </Routes>
+==========================================================================================
+
+
+
+
+//second way to navigating
+<div>
+<Link to='/receipeList'>ReceipeList</Link>
+<Link to='/componentsList'>ComponentsList</Link>
+</div>
+h1> React Routing ,Custom Hooks and More 
+    <button style={{background:'black',color:'white'}}>Navigate to ReceipeList</button>
+    <button onClick={()=> navigate('/receipeList')}>Navigate to ComponentsList</button>
+    <Routes>
+       <Route path='/receipeList' element={<ReceipeList>}/>
+       <Route path='/componentsList' element={<ComponentsList>}/>
+    </Routes>
+
+
+============================================================================
+
+
+
+Dynamic Routing in react router dom
+for example in receipeList there are 100 receipes ,
+                                        -receipeList/receipes1
+                                        -receipeList/receipes4
+                                        -receipeList/receipes100
+                                          like this way so 1,4,54,45,100 this is dynamic value
+                    so how going ot manage this ?
+---------------------------------------
+folder src>pages>
+               -comments
+               -receipes
+               -receipes-details
+------------------------------------------ 
+               -receipes-details  > ReceipeDetailPage.jsx
+                                    
+
+h1> React Routing ,Custom Hooks and More 
+    <button style={{background:'black',color:'white'}}>Navigate to ReceipeList</button>
+    <button onClick={()=> navigate('/receipeList')}>Navigate to ComponentsList</button>
+    <Routes>
+       <Route path='/receipeList' element={<ReceipeList>}/>
+       <Route path='/componentsList' element={<ComponentsList>}/>
+       <Route path='/receipe-list/:id' element={<ReceipeDetailPage/>}/>   --- : means dynamic routing 
+    </Routes> 
+
+
+    
+function ReceipeDetailPage()
+
+    const params=useParams()
+const {id}=params;
+    {
+        return(
+           <>
+           h1> ReceipeDetailPage of {id}
+           </>
+        )
+    }
+
+==================================================================
+
+ReceipeList()
+{
+    const location=useLocation();
+    log(location)
+
+}
+
+
+---------------------------------------
+folder src>pages>
+               -comments
+               -receipes
+               -receipes-details
+               =not-found   > NotFoundPage.jsx
+------------------------------------------ 
+fucntion NotFoundPage()
+{
+    <h3>  this page doesn't exist
+    <Link to='/receipeList'> go to receipe page
+}
+
+
+ <Routes>
+       <Route path='/receipeList' element={<ReceipeList>}/>
+       <Route path='/componentsList' element={<ComponentsList>}/>
+       <Route path='/receipe-list/:id' element={<ReceipeDetailPage/>}/>   --- : means dynamic routing 
+       <Route path='*' element={<NotFoundPage/>}/>   
+    </Routes> 
+
+
+    //outlet  :
+
+
+custom hook:
+      when you create custom hook i need to undestan why are create custom hook      
+
+Example : useFetch this is create for data fetching hook       useFetch(url,options={})
+
+
+
+
+
+SWR
+
+
+---------------------------------------
+another custom hook 'useWindowSize' 
+
+   ------useLayoutEffect
+
+ useLayoutEffect(effect: React.EffectCallback, deps?: React.DependencyList): void
+import useLayoutEffect
+
+
+The signature is identical to useEffect, but it fires synchronously after all DOM mutations. Use this to read layout from the DOM and synchronously re-render. Updates scheduled inside useLayoutEffect will be flushed synchronously, before the browser has a chance to paint.
+
+Prefer the standard useEffect when possible to avoid blocking visual updates.
+
+If you’re migrating code from a class component, useLayoutEffect fires in the same phase as componentDidMount and componentDidUpdate.
+
+
+
+
+-----------------------------------------
+both are same but slite different in  useEffect and useLayoutEffect 
+
+useEffect run once all the time dom elment render in document but useLayoutEffect before all dom element render in document(browser)
+
+
+================
+useLocalstorage
+useCounter
+useSession
+useId
+useOutsideClick
+=============
+
+
+src > react-hook-form-example
+
+npm install react-hook-from
+

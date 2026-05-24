@@ -1,0 +1,26 @@
+client folder create karo
+
+client>index.html ma bootstarp use karsu CDN LINK ne copy karsu css,js link ne ane paste karo
+
+
+// google fonts
+fonts >poppins saerch karo 400 valu
+---------import valu statement use karsu
+index.css ma paste karo @import valu statement(NAVIGATION MATE USE KARSU)
+
+ane heading mate PLAY search karo aema 700 valu(HEADING MATE USE KARSU)
+
+src > components >
+    > pages >
+---in pages folder all routes are stay  
+---so first of all we have to create appilcation layout ....why layout?
+kem ke varmvar header ne footer ne repate na karo aetle 
+    > components > layout >Layout.jsx
+
+
+-----------npm i react-router-dom
+
+pachi homepage,contactpage,aboutpage,policypage
+
+
+nav bar from bootstarp
